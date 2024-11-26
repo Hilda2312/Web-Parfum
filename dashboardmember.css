@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #670000;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+section p, section ul, section button {
+    font-size: 16px;
+    color: #555;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #670000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #670000;
+}
+/* Menambahkan posisi flexbox di bagian bawah */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#benefits {
+    margin-top: auto; /* Menjaga bagian ini tetap di bawah */
+    display: flex;
+    justify-content: center; /* Menyusun item di tengah */
+    gap: 30px;
+    padding: 40px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+.benefit-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Jarak antar item dalam container */
+    width: 100%;
+    max-width: 1000px; /* Menentukan lebar maksimum container */
+}
+
+.benefit-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 30%; /* Membuat tiga item berdampingan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+.benefit-item p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+    #benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
